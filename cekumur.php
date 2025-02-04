@@ -8,25 +8,28 @@
         <form method="POST">
             <label for="umur">Masukkan Umur</label>
             <input type="number" name="umur" id="umur" required> <br>
-            <input value="lihat umur" type="submit">
+            <label for="nama">Masukkan Nama</label>
+            <input name="nama" id="nama" required> <br>
+            <input value="Cek Umur" type="submit">
         </form>
         <div>
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $umur = $_POST["umur"];
+                $nama = $_POST["nama"];
 
                 if ($umur < 12) {
                     $umur = 'Anda Masih Anak-anak';
-                    echo $umur;
+                    echo "$nama, $umur <br/>";
                 } else if ($umur < 19) {
                     $umur = 'Anda Remaja';
-                    echo $umur;
+                    echo "$nama, $umur <br/>";
                 } else if ($umur < 59) {
                     $umur = 'Anda Dewasa';
-                    echo $umur;
-                } else if ($umur < 70) {
+                    echo "$nama, $umur <br/>";
+                } else if ($umur < 100) {
                     $umur = 'Anda Lansia';
-                    echo $umur;
+                    echo "$nama, $umur <br/>";
                 }
             }
             ?>
