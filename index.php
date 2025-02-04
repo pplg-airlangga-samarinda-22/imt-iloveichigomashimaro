@@ -1,4 +1,5 @@
 <html lang="en">
+    
 <head>
     <title>IMT Penghitung Berat Badan</title>
 </head>
@@ -13,9 +14,7 @@
             <input step="any" name="angka2" id="angka2" required> <br>
             <input name="imt" id="imt" value="menghitung" type="submit" value="hitung">
             <option name="imt" id="imt" value="menghitung"></option>
-
     </form>
-
     </div class="result">
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,7 +31,7 @@
             switch ($imt) {
                 case 'menghitung':
                     $imt = $berat / ($tinggi * $tinggi);
-                    echo $imt."<br />"; 
+                    echo "Hasil BMI: $imt <br/> "; 
                     
                     if ($imt < 17.0) {
                         $imt = $kurus1;
@@ -47,7 +46,7 @@
                         $imt = $normal;
                         echo "Hasil: $normal";
                     }
-                    else if ($imt < 25.1 - 27.0) {
+                    else if ($imt < 27.8) {
                         $imt = $berat1;
                         echo "Hasil: $berat1";
                     }
