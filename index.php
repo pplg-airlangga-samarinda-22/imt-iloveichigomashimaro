@@ -6,16 +6,16 @@
 <body>
     <div>
         <h2>IMT Penghitung Berat Badan</h2>
-        
+       
         <form method="POST">
             <label for="angka1">Masukkan Berat</label>
-            <input step="any" name="angka1" id="angka1" required> <br>
+            <input type="number" step="any" name="angka1" id="angka1" required> <br>
             <label for="angka2">Masukkan Tinggi</label>
-            <input step="any" name="angka2" id="angka2" required> <br>
-            <input name="imt" id="imt" value="Menghitung" type="submit">
-            <option name="imt" id="imt" value="menghitung"></option>
+            <input type="number" step="any" name="angka2" id="angka2" required> <br>
+            <input name="imt" id="imt" value="menghitung" type="submit"> <br>
+            <a href="cekumur.php">Cek Umur DISINI</a>
     </form>
-    </div class="result">
+    </div>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $berat = $_POST['angka1'];
@@ -39,7 +39,7 @@
                         echo "Hasil: $kurus1";
                     }
                     
-                    else if ($imt < 17.1 - 18.4) {
+                    else if ($imt < 17.0 - 18.4) {
                         $imt = $kurus2;
                         echo "Hasil: $kurus2";
                     }
