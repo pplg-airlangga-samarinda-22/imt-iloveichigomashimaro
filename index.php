@@ -27,7 +27,7 @@
             $berat1 = 'Gemuk, Kelebihan berat badan ringan';
             $berat2 = 'Gemuk, Kelebihan berat badan berat';
             $imt = $_POST['imt'];
-            $hasil = 0; 
+            
 
             switch ($imt) {
                 case 'menghitung':
@@ -51,7 +51,7 @@
                         $imt = $berat1;
                         echo "Hasil: $berat1";
                     }
-                    else if ($imt < 28) {
+                    else if ($imt < 100.0) {
                         $imt = $berat2;
                         echo "Hasil: $berat2";
                         
