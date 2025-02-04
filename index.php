@@ -11,12 +11,12 @@
             <input step="any" name="angka1" id="angka1" required> <br>
             <label for="angka2">Masukkan Tinggi</label>
             <input step="any" name="angka2" id="angka2" required> <br>
-                <option name="imt" id="imt" value="menghitung"></option>
-            <input name="imt" id="imt" value="menghitung" type="submit" value="hitung"> <br>
+            <input name="imt" id="imt" value="menghitung" type="submit" value="hitung">
+            <option name="imt" id="imt" value="menghitung"></option>
 
-    </form> <br>
+    </form>
 
-    </div class="result"> <br>
+    </div class="result">
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $berat = $_POST['angka1'];
@@ -34,24 +34,24 @@
                     $imt = $berat / ($tinggi * $tinggi);
                     echo $imt."<br />"; 
                     
-                    if ($imt < 16) {
+                    if ($imt < 17.0) {
                         $imt = $kurus1;
                         echo "Hasil: $kurus1";
                     }
                     
-                    elseif ($imt < 17 - 18) {
+                    else if ($imt < 17.0 - 18.4) {
                         $imt = $kurus2;
                         echo "Hasil: $kurus2";
                     }
-                    elseif ($imt < 18.5 - 25) {
+                    else if ($imt < 18.5 - 25.0) {
                         $imt = $normal;
                         echo "Hasil: $normal";
                     }
-                    elseif ($imt < 25.1 - 27.0) {
+                    else if ($imt < 25.1 - 27.0) {
                         $imt = $berat1;
                         echo "Hasil: $berat1";
                     }
-                    elseif ($imt < 28) {
+                    else if ($imt < 28) {
                         $imt = $berat2;
                         echo "Hasil: $berat2";
                         
@@ -63,8 +63,8 @@
         
 
         ?>
-    </div> <br>
-</div> <br>
+    </div>
+</div>
 
 </body>
 </html>
