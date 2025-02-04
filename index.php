@@ -11,11 +11,8 @@
             <input step="any" name="angka1" id="angka1" required> <br>
             <label for="angka2">Masukkan Tinggi</label>
             <input step="any" name="angka2" id="angka2" required> <br>
-            <label for="imt">IMT</label>
-            <select name="imt" id="imt" required>
-                <option value="menghitung">Hitung</option>
-            </select>
-            <input value="menghitung" type="submit" value="hitung"> <br>
+                <option name="imt" id="imt" value="menghitung"></option>
+            <input name="imt" id="imt" value="menghitung" type="submit" value="hitung"> <br>
 
     </form> <br>
 
