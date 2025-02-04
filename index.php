@@ -1,5 +1,5 @@
 <html lang="en">
-    
+
 <head>
     <title>IMT Penghitung Berat Badan</title>
 </head>
@@ -12,7 +12,7 @@
             <input step="any" name="angka1" id="angka1" required> <br>
             <label for="angka2">Masukkan Tinggi</label>
             <input step="any" name="angka2" id="angka2" required> <br>
-            <input name="imt" id="imt" value="menghitung" type="submit" value="hitung">
+            <input name="imt" id="imt" value="Menghitung" type="submit">
             <option name="imt" id="imt" value="menghitung"></option>
     </form>
     </div class="result">
@@ -30,19 +30,20 @@
 
             switch ($imt) {
                 case 'menghitung':
-                    $imt = $berat / ($tinggi * $tinggi);
-                    echo "Hasil BMI: $imt <br/> "; 
+                    if ($berat != 0 ) 
+                        $imt = $berat / ($tinggi * $tinggi);
+                        echo "Hasil BMI: $imt <br/> "; 
                     
                     if ($imt < 17.0) {
                         $imt = $kurus1;
                         echo "Hasil: $kurus1";
                     }
                     
-                    else if ($imt < 17.0 - 18.4) {
+                    else if ($imt < 17.1 - 18.4) {
                         $imt = $kurus2;
                         echo "Hasil: $kurus2";
                     }
-                    else if ($imt < 18.5 - 25.0) {
+                    else if ($imt < 25.0) {
                         $imt = $normal;
                         echo "Hasil: $normal";
                     }
